@@ -102,7 +102,7 @@ class MovieViewSet(
 
         if self.action == "retrieve":
             return MovieDetailSerializer
-        elif self.action == "upload_image":
+        if self.action == "upload_image":
             return MovieImageSerializer
 
         return MovieSerializer
